@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './startscreen.component.scss'
 })
 export class StartscreenComponent {
+  constructor() {}
 
+  newGame() {}
 }
