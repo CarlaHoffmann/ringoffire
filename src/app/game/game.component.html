@@ -1,2 +1,13 @@
 <!-- <p>game works!</p> -->
-<div class="gamescreen"></div>
+<div class="gamescreen">
+
+    <div class="card-stack">
+        @for (c of [1,2,3,4]; track c; let i = $index) {
+            <img [ngStyle]="{'right': (i*4) + 'px', 'bottom': (i*4) + 'px'}"
+              src="./assets/img/cards/card_cover.png" alt="">
+        }
+        <img (click)="takeCard()" [class.pick-card]="pickCardAnimation" class="top-card" style="right: 16px; bottom: 16px;"
+            src="./assets/img/cards/card_cover.png" alt="">
+        <!-- <img *ngFor="let c of [1,2,3,4,5]; let i = index" [ngStyle]="{'right': i + 'px'}" src="./assets/img/cards/card_cover.png" alt=""> -->
+    </div>
+</div>
