@@ -3,13 +3,13 @@
     
     <div class="card-stack">
         @for (c of [1,2,3,4]; track c; let i = $index) {
-            <img [ngStyle]="{'right': (i*4) + 'px', 'bottom': -116+(i*4) + 'px'}"
+            <img [ngStyle]="{'right': (i*4) + 'px', 'bottom': -148+(i*4) + 'px'}"
               src="./assets/img/cards/card_cover.png" alt="">
         }
-        <img (click)="takeCard()" class="top-card" style="right: 16px; bottom: -100px;"
+        <img (click)="takeCard()" class="top-card" style="right: 16px; bottom: -132px;"
             src="./assets/img/cards/card_cover.png" alt="">
-        <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 16px; bottom: -100px;"
-            src="./assets/img/cards/ace_1.png" alt="">
+        <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 16px; bottom: -132px;"
+            src="./assets/img/cards/{{ currentCard }}.png" alt="">
         <!-- <img *ngFor="let c of [1,2,3,4,5]; let i = index" [ngStyle]="{'right': i + 'px'}" src="./assets/img/cards/card_cover.png" alt=""> -->
     </div>
 </div>

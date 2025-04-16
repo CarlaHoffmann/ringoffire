@@ -13,6 +13,7 @@ import { Game } from '../models/game';
 export class GameComponent {
   pickCardAnimation = false;
   // gamedata = inject(GamedataService);
+  currentCard: string = '';
   game!: Game;
 
   constructor() {
@@ -25,6 +26,14 @@ export class GameComponent {
   }
 
   takeCard() {
-    this.pickCardAnimation = true;
+    if(!this.pickCardAnimation) {
+      this.currentCard = this.game.stack.pop() || ''; // pop() nimmt den letzten Wert im Array
+      console.log(this.currentCard);
+      this.pickCardAnimation = true;
+
+      setTimeout(()=>{
+        this.pickCardAnimation = false;
+      }, 1500)
+    }
   }
 }
