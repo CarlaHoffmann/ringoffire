@@ -1,10 +1,14 @@
 body {
     margin: 0;
 }
+
+.player-info {
+    position: absolute;
+    right: 0;
+}
+
 .gamescreen {
-    // background-image: url('./../../assets/img/wood-1716643_1920.jpg');
     background-image: url('./../../assets/img/wood-texture-close.jpg');
-    // background-image: url('./../../assets/img/beige-wooden-textured-flooring-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -55,4 +59,10 @@ body {
     100% {
         transform: scale(1.05) translateX(140px) translateY(-180px) rotate(-10deg);
     }
+}
+
+.played-card {
+    right: 16px;
+    bottom: -132px;
+    transform: scale(1.05) translateX(140px) translateY(-180px) rotate(-10deg);
 }
