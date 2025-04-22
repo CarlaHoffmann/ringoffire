@@ -71,6 +71,7 @@
         color: rgb(255, 255, 255);
         margin: 0;
         margin-top: 50px;
+        line-height: normal;
     }
 }
 
@@ -95,6 +96,8 @@ a {
         font-weight: bold;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         transition: transform 0.4s ease;
+        margin: 28px;
+        line-height: normal;
     }
     /* Hotspot für Hover-Bereich */
     .hover-area {
@@ -104,9 +107,15 @@ a {
         left: 20px;
         right: 20px;
         bottom: 58px;
+        // top: 0px;
+        // left: 0px;
+        // right: 0px;
+        // bottom: 0px;
         z-index: 2;
-        cursor: pointer;
-
+        // cursor: pointer;
+        &:hover {
+            cursor: pointer;
+        }
         &:hover ~ .start-btn-img {  
             filter: brightness(1.5);
             transform: scale(1.1);
