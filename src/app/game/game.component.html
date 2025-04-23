@@ -11,17 +11,17 @@
     <div class="card-stack">
         @for (c of [1,2,3,4]; track c; let i = $index) {
             <img [ngStyle]="{'right': (i*4) + 'px', 'bottom': -148+(i*4) + 'px'}"
-              src="./assets/img/cards/card_cover.png" alt="">
+              src="assets/img/cards/card_cover.png" alt="">
         }
         <img (click)="takeCard()" class="top-card" style="right: 16px; bottom: -132px;"
-            src="./assets/img/cards/card_cover.png" alt="">
+            src="assets/img/cards/card_cover.png" alt="">
 
         @for (card of game.playedCards; track card) {
-            <img class="played-card" src="./assets/img/cards/{{ card }}.png" alt="">
+            <img class="played-card" src="assets/img/cards/{{ card }}.png" alt="">
         }
 
         <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 16px; bottom: -132px;"
-            src="./assets/img/cards/{{ currentCard }}.png" alt="">
+            src="assets/img/cards/{{ currentCard }}.png" alt="">
         <!-- <img *ngFor="let c of [1,2,3,4,5]; let i = index" [ngStyle]="{'right': i + 'px'}" src="./assets/img/cards/card_cover.png" alt=""> -->
     </div>
 </div>
