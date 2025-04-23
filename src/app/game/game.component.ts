@@ -40,6 +40,8 @@ export class GameComponent {
       console.log('New card:' + this.currentCard);
       console.log('Game is', this.game);
 
+      this.game.currentPlayer++;
+      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length; // Rest-Opperator: 3/3 = 1 Rest 0;
       setTimeout(()=>{
         this.game.playedCards.push(this.currentCard);
         this.pickCardAnimation = false;
